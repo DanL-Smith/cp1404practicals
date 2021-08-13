@@ -10,9 +10,13 @@ def main():
                  'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
                  'bob']
 
-    for i in range(5):
-        number = int(input("Number: "))
+    count = 1
+    print("Enter a number less than 0 to finish.")
+    number = int(input(f"Number {count}: "))
+    while number >= 0:
         numbers.append(number)
+        count += 1
+        number = int(input(f"Number {count}: "))
     print_numbers_facts(numbers)
 
     username = input("Enter username: ")
