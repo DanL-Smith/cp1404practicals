@@ -7,14 +7,15 @@ import random
 
 MINIMUM_NUMBER = 1
 MAXIMUM_NUMBER = 45
+NUMBERS_PER_LINE = 6
 
 
 def main():
     number_of_lines = int(input("How many quick picks? "))
     for i in range(number_of_lines):
-        numbers = random.sample(range(MINIMUM_NUMBER, MAXIMUM_NUMBER), 6)
+        numbers = random.sample(range(MINIMUM_NUMBER, MAXIMUM_NUMBER), NUMBERS_PER_LINE)
         numbers.sort()
-        print(*numbers)
+        print(" ".join(f"{number:2}" for number in numbers))
 
 
 main()
