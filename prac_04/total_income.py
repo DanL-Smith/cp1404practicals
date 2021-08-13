@@ -14,6 +14,7 @@ def main():
         incomes.append(income)
     print_report(incomes)
 
+
 def print_report(incomes):
     """Format and print the income report"""
     print("\nIncome Report\n-------------")
