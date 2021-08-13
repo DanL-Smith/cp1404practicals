@@ -8,7 +8,13 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = get_data()
-    print(data)
+    print_subject_details(data)
+
+
+def print_subject_details(data):
+    format_width = max(len(str(x)) for sublist in data for x in sublist) # assigns the largest len element in data to variable
+    for i in range(len(data)):
+        print(f"{data[i][0]} is taught by {data[i][1]:<{format_width}} and has {data[i][2]:>3} students")
 
 
 def get_data():
@@ -19,7 +25,6 @@ def get_data():
         line = line.strip()  # Remove the \n
         parts = line.split(',')  # Separate the data into its parts
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        print(parts)
         data.append(parts)
     input_file.close()
     return data
