@@ -12,3 +12,6 @@ class ProgrammingLanguage(object):
     def is_dynamic(self):
         """Determine if instance is dynamic"""
         return True if self.typing.lower() == "dyanmic" else False
+
+    def __str__(self):
+        return f"{self.name}, {self.typing} Typing, Reflection = {self.reflection}, first appeared in {self.year}"
