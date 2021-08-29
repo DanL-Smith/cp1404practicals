@@ -2,7 +2,7 @@ CURRENT_YEAR = 2021
 
 
 class Guitar(object):
-    def __init__(self, name = '', year = 0, cost = 0):
+    def __init__(self, name='', year=0, cost=0):
         self.name = name
         self.year = year
         self.cost = cost
@@ -14,4 +14,4 @@ class Guitar(object):
         return CURRENT_YEAR - self.year
 
     def is_vintage(self):
-        return True if Guitar.get_age(self) >= 50 else False
+        return True if self.get_age() >= 50 else False
