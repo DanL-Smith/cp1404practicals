@@ -1,3 +1,4 @@
+"""CP1404/CP5632 Practical - Guitar Class Test Program"""
 from prac_06.guitar import Guitar
 
 guitar1 = Guitar("Gibson L-5 CES", 1922, 16035.40)

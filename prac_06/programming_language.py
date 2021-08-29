@@ -2,8 +2,9 @@
 
 
 class ProgrammingLanguage(object):
-    """Initialize a programming language instance"""
+    """Represent a Guitar Object"""
     def __init__(self, name='', typing="", reflection="", year=0):
+        """Initialize a programming language instance"""
         self.name = name
         self.typing = typing
         self.reflection = reflection
@@ -11,7 +12,7 @@ class ProgrammingLanguage(object):
 
     def is_dynamic(self):
         """Determine if instance is dynamic"""
-        return True if self.typing.lower() == "dyanmic" else False
+        return True if self.typing.lower() == "dynamic" else False
 
     def __str__(self):
         return f"{self.name}, {self.typing} Typing, Reflection = {self.reflection}, first appeared in {self.year}"
