@@ -29,5 +29,5 @@ def get_guitars():
     return guitars
 
 
-if __name__ == main():
+if __name__ == "__main__":
     main()
