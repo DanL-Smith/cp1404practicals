@@ -1,5 +1,6 @@
 """CP1404/CP5632 Practical - Guitar class"""
 CURRENT_YEAR = 2021
+VINTAGE_AGE = 50
 
 
 class Guitar(object):
@@ -19,4 +20,4 @@ class Guitar(object):
 
     def is_vintage(self):
         """Determine if guitar is vintage (50 years or older)"""
-        return True if self.get_age() >= 50 else False
+        return self.get_age() >= VINTAGE_AGE
