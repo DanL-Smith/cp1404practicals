@@ -2,7 +2,7 @@
 
 
 class ProgrammingLanguage(object):
-    """Represent a Guitar Object"""
+    """Represent a programming language Object"""
     def __init__(self, name='', typing="", reflection="", year=0):
         """Initialize a programming language instance"""
         self.name = name
