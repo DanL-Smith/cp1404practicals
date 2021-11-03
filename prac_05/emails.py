@@ -19,10 +19,10 @@ def main():
 
 
 def get_name_from_email(email):
-    modified_email = email.replace(",", " ").replace(".", " ")
-    name = " ".join(
-        [char for char in (modified_email[:modified_email.find("@")].split()) if not char.isdigit()]).title()
-    return name
+    modified_email_string = email.replace(",", " ").replace(".", " ")
+    names_split = modified_email_string[:modified_email_string.find("@")].split()
+    full_name_string = " ".join(names_split).title()
+    return full_name_string
 
 
 if __name__ == '__main__':
