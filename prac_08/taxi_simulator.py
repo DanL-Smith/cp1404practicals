@@ -34,7 +34,7 @@ def main():
                     total_bill += current_taxi.get_fare()
         elif choice == "c":
             print("Taxis available:")
-            current_taxi = determine_current_taxi(current_taxi, taxis)
+            current_taxi = get_current_taxi(current_taxi, taxis)
         else:
             print("Invalid option")
         print(f"Bill to date: ${total_bill}")
@@ -65,7 +65,7 @@ def get_valid_distance(prompt: str):
         return number
 
 
-def determine_current_taxi(current_taxi, taxis: list):
+def get_current_taxi(current_taxi, taxis: list):
     """Determine what the current taxi is based on user input."""
     for i, taxi in enumerate(taxis):
         print(i, " - ", taxi)
