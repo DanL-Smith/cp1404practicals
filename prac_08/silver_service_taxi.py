@@ -13,11 +13,11 @@ class SilverServiceTaxi(Taxi):
         """Initialise a SilverServiceTaxi."""
         super().__init__(name, fuel)
         self.fanciness = fanciness
-        self.PRICE_PER_KM *= fanciness
+        self.price_per_km *= fanciness
 
     def __str__(self):
         """Return a string representation of a SilverServiceTaxi."""
-        return f"{super().__str__()}, {self.current_fare_distance}, ${self.PRICE_PER_KM:.2f}/km " \
+        return f"{super().__str__()}, {self.current_fare_distance}, ${self.price_per_km:.2f}/km " \
                f"plus flagfall of ${self.flagfall} "
 
     def get_fare(self):
